@@ -1,0 +1,67 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "App Debug",
+      "preLaunchTask": "App",
+      "configurations": [
+        "App Main",
+        "App Renderer"
+      ],
+      "presentation": {
+        "hidden": false,
+        "group": "App",
+        "order": 1
+      }
+    }
+  ],
+  "configurations": [
+    {
+      "name": "App Main",
+      "port": 9224,
+      "request": "attach",
+      "cwd": "${workspaceFolder}/packages/aragorn-app-main",
+      "restart": true,
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "pwa-node",
+      "presentation": {
+        "hidden": false,
+        "group": "",
+        "order": 2
+      }
+    },
+    {
+      "name": "App Renderer",
+      "port": 9223,
+      "request": "attach",
+      "type": "pwa-chrome",
+      "webRoot": "${workspaceFolder}/packages/aragorn-app-renderer",
+      "restart": true,
+      "presentation": {
+        "hidden": false,
+        "group": "",
+        "order": 3
+      }
+    },
+    {
+      "name": "App Cli",
+      "program": "${workspaceFolder}/packages/aragorn-cli/dist/index.js",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/aragorn-cli",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "pwa-node",
+      "presentation": {
+        "hidden": false,
+        "group": "",
+        "order": 4
+      }
+    },
+  ]
+}

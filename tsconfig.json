@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2015",
+    "module": "CommonJS",
+    "noImplicitAny": false,
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "composite": true,
+    "declaration": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@main/*": [
+        "packages/aragorn-app-main/src/*"
+      ],
+      "@renderer/*": [
+        "packages/aragorn-app-renderer/src/*"
+      ]
+    }
+  },
+  "include": [
+    "packages",
+    "global.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

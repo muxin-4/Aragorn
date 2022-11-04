@@ -1,0 +1,25 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": true
+        }
+      }
+    ],
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    "const-enum",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-syntax-dynamic-import",
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "@babel/plugin-proposal-class-properties"
+  ]
+}

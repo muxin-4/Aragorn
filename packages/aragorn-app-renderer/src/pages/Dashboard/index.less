@@ -1,0 +1,71 @@
+.dashboard-page {
+  .main-content {
+    flex: auto;
+    overflow: auto;
+  }
+  .profile-wrapper {
+    margin-bottom: 20px;
+    .title {
+      font-size: 16px;
+      color: #000;
+      opacity: 0.66;
+      margin-bottom: 15px;
+    }
+    .card-wrapper {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: flex-start;
+      .card {
+        width: 144px;
+        height: 112px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #f9f9f9;
+        color: #000;
+        .card-icon {
+          width: 32px;
+          height: 32px;
+        }
+        span {
+          text-align: center;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          display: block;
+          width: 100%;
+          padding: 0 10px;
+          margin-top: 10px;
+        }
+        &:not(:last-of-type) {
+          margin-right: 20px;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .card-active {
+        background: #5960ff;
+        color: #fff;
+      }
+    }
+  }
+  .history-wrapper {
+    padding-right: 20px;
+    .title {
+      font-size: 16px;
+      color: #000;
+      opacity: 0.66;
+      margin-bottom: 15px;
+    }
+    .row-item:hover {
+      color: #5960ff;
+    }
+    .ant-table-placeholder td {
+      border-bottom: none;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.uploader-page {
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  .side-wrapper {
+    width: 150px;
+    height: 100%;
+    background: #f6f8fb;
+    .title {
+      margin-top: 15px;
+      padding: 20px;
+      color: #000;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .list {
+      .item {
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      .item-active {
+        background: #fff;
+        color: #5865ff;
+      }
+    }
+  }
+  .content-wrapper {
+    flex: auto;
+    padding: 20px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    .form-wrapper {
+      flex: auto;
+      overflow: auto;
+      margin-bottom: 10px;
+    }
+    .footer {
+      flex-shrink: 0;
+    }
+  }
+}
