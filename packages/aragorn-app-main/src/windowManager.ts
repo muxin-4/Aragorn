@@ -28,9 +28,12 @@ export class WindowManager {
         enableRemoteModule: true
       }
     });
+    const devtools = new BrowserWindow();
 
     if (isDev) {
       window.loadURL(`http://localhost:${process.env.RENDERER_DEV_PORT}`);
+      window.webContents.setDevToolsWebContents(devtools.webContents);
+      window.webContents.openDevTools({ mode: 'right' });
     } else {
       window.loadFile(path.resolve(__dirname, '../renderer/index.html'));
     }
