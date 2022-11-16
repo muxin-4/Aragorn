@@ -14,10 +14,28 @@
       "path": "../aragorn-types"
     },
     {
+      "path": "../aragorn-uploader-alioss"
+    },
+    {
       "path": "../aragorn-uploader-custom"
     },
     {
       "path": "../aragorn-uploader-github"
     },
+    {
+      "path": "../aragorn-uploader-gitee"
+    },
+    {
+      "path": "../aragorn-uploader-qiniu"
+    },
+    {
+      "path": "../aragorn-uploader-tencentcos"
+    },
+    {
+      "path": "../aragorn-uploader-ucloud"
+    },
+    {
+      "path": "../aragorn-uploader-upyun"
+    }
   ]
 }
