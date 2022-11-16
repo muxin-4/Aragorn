@@ -20,7 +20,8 @@
     "tsc": "tsc --noEmit",
     "lint": "eslint packages --ext .ts,.tsx",
     "lint:fix": "eslint packages --fix --ext .ts,.tsx",
-    "prettier": "prettier --write packages"
+    "prettier": "prettier --write packages",
+    "clean": "rm -rf node_modules && lerna clean"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
