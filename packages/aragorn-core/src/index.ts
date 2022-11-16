@@ -3,7 +3,6 @@ import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import { Uploader } from 'aragorn-types';
 import { CustomUploader } from 'aragorn-uploader-custom';
-import { AliOssUploader } from 'aragorn-uploader-alioss';
 import { TencentCosUploader } from 'aragorn-uploader-tencentcos';
 import { QiniuUploader } from 'aragorn-uploader-qiniu';
 import { UCloudUploader } from 'aragorn-uploader-ucloud';
@@ -11,7 +10,6 @@ import { UpyunUploader } from 'aragorn-uploader-upyun';
 import { GithubUploader } from 'aragorn-uploader-github';
 import { GiteeUploader } from 'aragorn-uploader-gitee';
 
-const alioss = new AliOssUploader();
 const tencentcos = new TencentCosUploader();
 const qiniu = new QiniuUploader();
 const ucloud = new UCloudUploader();
@@ -24,7 +22,7 @@ export class AragornCore {
   protected uploaders: Uploader[];
 
   constructor() {
-    this.uploaders = [alioss, tencentcos, qiniu, ucloud, upyun, github, gitee, custom];
+    this.uploaders = [tencentcos, qiniu, ucloud, upyun, github, gitee, custom];
   }
 
   getUploaderByName(name: string) {

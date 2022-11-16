@@ -14,9 +14,6 @@
       "path": "../aragorn-types"
     },
     {
-      "path": "../aragorn-uploader-alioss"
-    },
-    {
       "path": "../aragorn-uploader-custom"
     },
     {

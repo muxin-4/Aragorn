@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "aragorn-types": "^1.0.0",
-    "aragorn-uploader-alioss": "^1.0.0",
     "aragorn-uploader-custom": "^1.0.0",
     "aragorn-uploader-gitee": "^1.0.0",
     "aragorn-uploader-github": "^1.0.0",
