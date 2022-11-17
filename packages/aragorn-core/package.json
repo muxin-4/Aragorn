@@ -25,10 +25,6 @@
     "aragorn-types": "^1.0.0",
     "aragorn-uploader-custom": "^1.0.0",
     "aragorn-uploader-github": "^1.0.0",
-    "aragorn-uploader-qiniu": "^1.0.0",
-    "aragorn-uploader-tencentcos": "^1.0.0",
-    "aragorn-uploader-ucloud": "^1.0.0",
-    "aragorn-uploader-upyun": "^1.0.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
