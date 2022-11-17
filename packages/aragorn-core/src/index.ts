@@ -8,21 +8,19 @@ import { QiniuUploader } from 'aragorn-uploader-qiniu';
 import { UCloudUploader } from 'aragorn-uploader-ucloud';
 import { UpyunUploader } from 'aragorn-uploader-upyun';
 import { GithubUploader } from 'aragorn-uploader-github';
-import { GiteeUploader } from 'aragorn-uploader-gitee';
 
 const tencentcos = new TencentCosUploader();
 const qiniu = new QiniuUploader();
 const ucloud = new UCloudUploader();
 const upyun = new UpyunUploader();
 const github = new GithubUploader();
-const gitee = new GiteeUploader();
 const custom = new CustomUploader();
 
 export class AragornCore {
   protected uploaders: Uploader[];
 
   constructor() {
-    this.uploaders = [tencentcos, qiniu, ucloud, upyun, github, gitee, custom];
+    this.uploaders = [tencentcos, qiniu, ucloud, upyun, github, custom];
   }
 
   getUploaderByName(name: string) {
