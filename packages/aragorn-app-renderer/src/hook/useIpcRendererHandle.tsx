@@ -8,6 +8,7 @@ export const useAppStateHandle = () => {
   const { dispatch } = useAppContext();
 
   useEffect(() => {
+    // 渲染进程请求上传文件
     ipcRenderer.send('uploaded-files-get');
     ipcRenderer.send('setting-configuration-get');
     ipcRenderer.send('uploader-profiles-get');

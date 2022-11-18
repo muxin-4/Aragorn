@@ -8,6 +8,10 @@ import { UploaderProfileManager, UploaderProfile } from './uploaderProfileManage
 import { WebServer } from './webServer';
 import { Logger } from './logger';
 
+/**
+ * ipcMain 从主进程到渲染进程的异步通信。
+ * 文档：https://www.electronjs.org/zh/docs/latest/api/ipc-main
+ */
 export class Ipc {
   static win: BrowserWindow;
 
@@ -22,6 +26,7 @@ export class Ipc {
 
   static sendMessage(channel: string, channelData?: any) {
     if (BrowserWindow.getAllWindows().length > 0) {
+      // 主进程向渲染进程发送消息
       Ipc.win.webContents.send(channel, channelData);
     }
   }
@@ -57,6 +62,10 @@ export class Ipc {
     this.fileManageHandle();
   }
 
+  /**
+   * 检查更新
+   * todo 使用electron-updater重写自动更新
+   */
   protected appUpdateHandlee() {
     const { autoUpdate } = this.setting.get();
     if (autoUpdate) {
