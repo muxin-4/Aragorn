@@ -28,10 +28,10 @@ export class WindowManager {
         enableRemoteModule: true
       }
     });
-    const devtools = new BrowserWindow();
 
     if (isDev) {
       window.loadURL(`http://localhost:${process.env.RENDERER_DEV_PORT}`);
+      const devtools = new BrowserWindow();
       window.webContents.setDevToolsWebContents(devtools.webContents);
       window.webContents.openDevTools({ mode: 'right' });
     } else {
