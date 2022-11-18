@@ -45,7 +45,9 @@ export class WindowManager {
 
   showWindow() {
     // Mac 显示 dock icon
-    app?.dock?.show();
+    if (process.platform === 'darwin') {
+      app?.dock?.show();
+    }
 
     // 打开的窗口数量为9
     if (BrowserWindow.getAllWindows().length === 0) {
