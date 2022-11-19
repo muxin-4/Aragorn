@@ -141,7 +141,7 @@ npm run setup
 ```bash
 npm run app:dev
 # 新开命令行窗口执行
-npm run app:start
+npm run app:start:dev
 ```
 
 方式二（推荐）

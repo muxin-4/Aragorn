@@ -56,7 +56,7 @@
     },
     {
       "type": "npm",
-      "script": "start",
+      "script": "start:dev",
       "path": "packages/aragorn-app-main/",
       "label": "App Start",
       "isBackground": true,

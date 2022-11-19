@@ -29,7 +29,13 @@ Logger.getInstance().init();
 /**
  * 加载根路径的.env文件中的配置到process.env
  */
-dotenvConfig({ path: '../../.env' });
+console.log('process.env1', process.env.npm_lifecycle_event);
+if (process.env.npm_lifecycle_event === 'start:dev') {
+  dotenvConfig({ path: '../../.env.dev' });
+  console.log('process.env2', process.env);
+  console.log('process.env3', process.env.RENDERER_DEV_PORT2);
+  console.log('process.env4', process?.env?.REACT_APP_API_PATH);
+}
 
 /**
  * 客户端开启单实例
