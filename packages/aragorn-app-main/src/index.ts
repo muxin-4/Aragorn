@@ -30,7 +30,7 @@ Logger.getInstance().init();
  * 加载根路径的.env文件中的配置到process.env
  */
 console.log('process.env0', process.env);
-dotenvConfig({ path: '../../.env.dev' });
+dotenvConfig({ path: '../../.env' });
 
 /**
  * 客户端开启单实例
