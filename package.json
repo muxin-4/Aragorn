@@ -5,6 +5,10 @@
     "node": ">=12.16.3"
   },
   "scripts": {
+    "app:dev": "lerna run dev --parallel --scope aragorn-app-*",
+    "app:start:dev": "lerna run start:dev --scope aragorn-app-main",
+    "app:start:test": "lerna run start:test --scope aragorn-app-main",
+    "app:start:uat": "lerna run start:uat --scope aragorn-app-main",
     "build": "npm run setup && npm run app:build",
     "setup": "npx lerna bootstrap && npm run core:build && npm run cli:build",
     "core:dev": "lerna run dev --scope aragorn-core",
@@ -12,9 +16,7 @@
     "core:clean": "lerna run clean --scope aragorn-core",
     "cli:dev": "lerna run dev --scope aragorn-cli",
     "cli:build": "lerna run build --scope aragorn-cli",
-    "app:dev": "lerna run dev --parallel --scope aragorn-app-*",
     "app:build": "lerna run build --parallel --scope aragorn-app-*",
-    "app:start": "lerna run start --scope aragorn-app-main",
     "app:pack": "lerna run pack --scope aragorn-app-main",
     "app:dist": "lerna run dist --scope aragorn-app-main",
     "tsc": "tsc --noEmit",
